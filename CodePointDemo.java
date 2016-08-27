@@ -40,10 +40,10 @@ public class CodePointDemo {
   }
 
   public static void main(String[] args) throws UnsupportedEncodingException {
-    System.out.println(formatCodePoints("0"));
-    System.out.println(formatCodePoints("\u263A"));  // ☺
-    System.out.println(formatCodePoints("\u8F38"));  // 輸
+    System.out.println(formatCodePoints("0"));  // 0: codePoints=[48], codePointsLength=1, charsLength=1, utf8BytesLength=1
+    System.out.println(formatCodePoints("\u263A"));  // ☺: codePoints=[9786], codePointsLength=1, charsLength=1, utf8BytesLength=3
+    System.out.println(formatCodePoints("\u8F38"));  // 輸: codePoints=[36664], codePointsLength=1, charsLength=1, utf8BytesLength=3
     // supplementary characters (2 chars, 1 code point which should be displayed by one glyph)
-    System.out.println(formatCodePoints("\uD801\uDC00"));  // 𐐀
+    System.out.println(formatCodePoints("\uD801\uDC00"));  // 𐐀: codePoints=[66560], codePointsLength=1, charsLength=2, utf8BytesLength=4
   }
 }
