@@ -1,5 +1,3 @@
-package com.arcrocket;
-
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
