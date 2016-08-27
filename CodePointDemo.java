@@ -9,7 +9,7 @@ public class CodePointDemo {
     for (int i = 0; i < chars.length; i++, codePointsLength++) {
       char c1 = chars[i];
       int codePoint;
-      if (Character.isHighSurrogate(c1) && ++i < chars.length) {  // decode for for the high surrogate index and skip the low surrogate index
+      if (Character.isHighSurrogate(c1) && ++i < chars.length) {  // decode for the high surrogate index and skip the low surrogate index
         char c2 = chars[i];
         codePoint = Character.isLowSurrogate(c2) ? Character.toCodePoint(c1, c2) : c1;
       }
